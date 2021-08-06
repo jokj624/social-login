@@ -1,4 +1,5 @@
-// controller index file
+import googleController from "./googleController";
+
 export {
-    
+    googleController
 }
