@@ -20,7 +20,9 @@ export default {
    * That long string from mlab
    */
   mongoURI: process.env.MONGODB_URI,
-
+  jwtSecret: process.env.JWT_SECRET,
+  googleCLIENTID: process.env.GOOGLE_CLIENTID,
+  googleSECRET: process.env.GOOGLE_SECRET
   /**
    * Your secret sauce
 
