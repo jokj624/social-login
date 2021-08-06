@@ -5,7 +5,7 @@ import routes from './routes';
 
 connectDB();
 
-app.use(express.urlencoded);
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());  
 
 app.use(routes);   //라우터 
@@ -20,6 +20,7 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
+app.use(express.static(__dirname + '/public'));
 app 
   .listen(5000, () => {
     console.log(`
