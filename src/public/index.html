@@ -7,13 +7,24 @@
     <title>login</title>
     <meta charset="UTF-8" />
     <meta name="google-signin-client_id" content="1034287309774-2pf7dmbbfoh8lfvarb28imdtiopjafei.apps.googleusercontent.com">
-    <script type="text/javascript" src="login.js"></script>
 </head>
 
 <body>
     <input type="button" class="button" value="" onclick="login()">
+    <script type="text/javascript"
+        src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+    <div id="appleid-signin" data-color="black" data-border="true" data-type="sign in" onclick="apple()"></div>
+    <script type="text/javascript">
+        AppleID.auth.init({
+            clientId: 'com.signintest.service',
+            scope: 'name email',
+            redirectURI: 'https://iot624.tistory.com',
+            state: 'abcdefghijk'
+        });
+    </script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script type="text/javascript" src="./login.js"></script>
+    <script type="text/javascript" src="./apple.js"></script>
 </body>
 
 </html>
